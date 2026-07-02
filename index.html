@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <title>MoSTeMM 1 - Borang Permohonan Meja Bantu MyKKP</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background-color: #f4f4f9; color: #333; }
+        .container { max-width: 900px; margin: 0 auto; background: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        h2, h3 { text-align: center; margin-bottom: 5px; color: #002b5c; }
+        .header-meta { text-align: right; font-weight: bold; font-size: 12px; margin-bottom: 20px; }
+        table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
+        th, td { border: 1px solid #bcbcbc; padding: 10px; text-align: left; font-size: 13px; }
+        th { background-color: #f2f2f2; }
+        .section-title { background-color: #002b5c; color: white; font-weight: bold; }
+        .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin-bottom: 20px; }
+        .form-group { display: flex; flex-direction: column; margin-bottom: 15px; }
+        label { font-weight: bold; margin-bottom: 5px; font-size: 13px; }
+        input[type="text"], input[type="email"], input[type="date"], textarea, select { padding: 10px; border: 1px solid #ccc; border-radius: 4px; font-size: 14px; width: 100%; box-sizing: border-box; }
+        .checkbox-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+        .btn-submit { background-color: #008cba; color: white; padding: 12px 20px; border: none; border-radius: 4px; cursor: pointer; font-size: 16px; font-weight: bold; width: 100%; margin-top: 20px; }
+        .btn-submit:hover { background-color: #005f73; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header-meta">jkkpswk <br> MoSTeMM 1</div>
+    <h2>BORANG PERMOHONAN MEJA BANTU MyKKP</h2>
+    <h3>MODUL SOKONGAN TEKNOLOGI MAKLUMAT MYKKP</h3>
+    <p style="text-align:center; font-size:12px; margin-bottom:30px;">KEPADA: Pegawai IT Negeri / STM (Ibu Pejabat) / Pegawai Lantikan Khas</p>
+
+    <form id="mostemForm">
+        <table>
+            <tr class="section-title"><td colspan="2">A. MAKLUMAT PENGALIRAN BORANG (DIISI OLEH PEMOHON)</td></tr>
+            <tr>
+                <td><label>E-mel Penyokong (Ketua Seksyen):</label><input type="email" name="emailPenyokong" required placeholder="contoh: ketua@mohr.gov.my"></td>
+                <td><label>E-mel Pelulus (ICTSO / Pengarah):</label><input type="email" name="emailPelulus" required placeholder="contoh: pengarah@mohr.gov.my"></td>
+            </tr>
+        </table>
+
+        <table>
+            <tr class="section-title"><td colspan="2">B. MAKLUMAT PEMOHON</td></tr>
+            <tr>
+                <td width="50%"><label>Nama Pemohon:</label><input type="text" name="namaPemohon" required value="Nasfu"></td>
+                <td><label>E-mel Pemohon (MOHR):</label><input type="email" name="emailPemohon" required value="nasfu@mohr.gov.my"></td>
+            </tr>
+            <tr>
+                <td><label>Seksyen:</label><input type="text" name="seksyen" required value="Seksyen Pemeriksaan Statutori"></td>
+                <td><label>Tarikh:</label><input type="date" name="tarikh" required value="2026-09-29"></td>
+            </tr>
+        </table>
+
+        <table>
+            <tr class="section-title"><td colspan="2">C. JENIS PERKHIDMATAN (Sila Tandakan X Pada Ruangan Berkaitan)</td></tr>
+            <tr>
+                <td><strong>URUS AKAUN PENGGUNA</strong><br>
+                    <input type="checkbox" name="perkhidmatan" value="Reset Kata Laluan Pengguna"> Reset Kata Laluan<br>
+                    <input type="checkbox" name="perkhidmatan" value="Aktifkan Akaun"> Aktifkan Akaun<br>
+                    <input type="checkbox" name="perkhidmatan" value="Kod Pengesahan Emel"> Kod Pengesahan Emel<br>
+                    <input type="checkbox" name="perkhidmatan" value="Kemaskini Nama Pemohon"> Kemaskini Nama Pemohon
+                </td>
+                <td><strong>URUS AKAUN PEGAWAI</strong><br>
+                    <input type="checkbox" name="perkhidmatan" value="Reset Kata Laluan Pegawai"> Reset Kata Laluan<br>
+                    <input type="checkbox" name="perkhidmatan" value="Wujudkan ID Baru"> Wujudkan ID Baru<br>
+                    <input type="checkbox" name="perkhidmatan" value="Kemaskini Tandatangan"> Kemaskini Tandatangan<br>
+                    <input type="checkbox" name="perkhidmatan" value="Kemaskini Role/Seksyen"> Kemaskini Role/Seksyen
+                </td>
+            </tr>
+            <tr>
+                <td><strong>URUS PERMOHONAN/AGIHAN</strong><br>
+                    <input type="checkbox" name="perkhidmatan" value="Reroute"> Reroute<br>
+                    <input type="checkbox" name="perkhidmatan" value="Reassign" checked> Reassign<br>
+                    <input type="checkbox" name="perkhidmatan" value="Pembatalan"> Pembatalan<br>
+                    <input type="checkbox" name="perkhidmatan" value="Restart Workflow"> Restart Workflow
+                </td>
+                <td><strong>URUS LOJI/TEMPAT KERJA</strong><br>
+                    <div class="checkbox-grid">
+                        <div><input type="checkbox" name="perkhidmatan" value="Reset Loji"> Reset Loji</div>
+                        <div><input type="checkbox" name="perkhidmatan" value="Kemaskini Status Loji"> Kemaskini Status Loji</div>
+                        <div><input type="checkbox" name="perkhidmatan" value="Kemaskini Pemunya Loji"> Kemaskini Pemunya Loji</div>
+                        <div><input type="checkbox" name="perkhidmatan" value="Kemaskini Tempat Kerja Loji"> Kemaskini Tempat Kerja Loji</div>
+                        <div style="grid-column: span 2;"><input type="checkbox" name="perkhidmatan" value="Kemaskini Maklumat Loji (Doket)"> Kemaskini Maklumat Loji (Doket)</div>
+                        <div><input type="checkbox" name="perkhidmatan" value="Kemaskini Status Tempat Kerja"> Kemaskini Status Tempat Kerja</div>
+                        <div><input type="checkbox" name="perkhidmatan" value="Kemaskini Nama Tempat Kerja"> Kemaskini Nama Tempat Kerja</div>
+                        <div><input type="checkbox" name="perkhidmatan" value="Kemaskini Alamat Tempat Kerja"> Kemaskini Alamat Tempat Kerja</div>
+                        <div><input type="checkbox" name="perkhidmatan" value="Kemaskini Kod JKKP Negeri"> Kemaskini Kod JKKP Negeri</div>
+                        <div><input type="checkbox" name="perkhidmatan" value="Kemaskini Poskod Negeri"> Kemaskini Poskod Negeri</div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td><strong>URUS KEWANGAN</strong><br>
+                    <input type="checkbox" name="perkhidmatan" value="Kemaskini Bil"> Kemaskini Bil<br>
+                    <input type="checkbox" name="perkhidmatan" value="Pembatalan Bil"> Pembatalan Bil<br>
+                    <input type="checkbox" name="perkhidmatan" value="Kemaskini Status Pembayaran"> Kemaskini Status Pembayaran
+                </td>
+                <td><strong>LAIN-LAIN</strong><br>
+                    <input type="text" name="perkhidmatanLain" placeholder="Nyatakan jika ada">
+                </td>
+            </tr>
+        </table>
+
+        <table>
+            <tr class="section-title"><td colspan="2">D. PERKARA PRODUK YANG MELIBATKAN DS-13-001</td></tr>
+            <tr>
+                <td colspan="2">
+                    <label>Pilih Produk Terlibat:</label>
+                    <select name="produk">
+                        <option value="Perakuan Kelayakan (CF) Loji">1. Perakuan Kelayakan (CF) Loji</option>
+                        <option value="Surat Kelulusan Pindah Lokasi Loji">2. Surat Kelulusan Pindah Lokasi Loji</option>
+                        <option value="Surat Kebenaran Memasang Loji (PTI)">3. Surat Kebenaran Memasang Loji (PTI)</option>
+                        <option value="Surat Verifikasi Rekabentuk">4. Surat Verifikasi Rekabentuk</option>
+                        <option value="Bil Pemeriksaan">5. Bil Pemeriksaan</option>
+                        <option value="Surat Pengubahan Loji">6. Surat Pengubahan Loji</option>
+                        <option value="Resit Pemeriksaan">7. Resit Pemeriksaan</option>
+                        <option value="Surat kepada Kelulusan OK">8. Surat kepada Kelulusan OK (syarikat/individu)</option>
+                        <option value="Sijil Pengesahan Tempat Kerja">9. Sijil Pengesahan Tempat Kerja</option>
+                        <option value="Surat Kelulusan Pindah Hakmilik">10. Surat Kelulusan Pindah Hakmilik</option>
+                        <option value="Surat Pemberitahuan Pembaikan/Pembukaan">11. Surat Pemberitahuan Pembaikan/ Pembukaan</option>
+                        <option value="Pendaftaran Orang Kompeten">14. Pendaftaran Orang Kompeten (Individu/ Syarikat)</option>
+                        <option value="Lain-lain dokumen" selected>12/13. Lain-lain dokumen / Surat Status Kerajaan</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td width="50%"><label>No. Rujukan:</label><input type="text" name="noRujukan" required value="sw/pekala/26/102545"></td>
+                <td><label>Penerangan / Alasan / Sebab:</label><textarea name="penerangan" required rows="2">Reassign to Farah</textarea></td>
+            </tr>
+        </table>
+
+        <button type="button" class="btn-submit" onclick="submitBorang()">Hantar Permohonan</button>
+    </form>
+</div>
+
+<script>
+    function submitBorang() {
+        const form = document.getElementById('mostemForm');
+        const formData = new FormData(form);
+        
+        // Kumpul semua checkbox yang ditanda
+        let perkhidmatanTerpilih = [];
+        document.querySelectorAll('input[name="perkhidmatan"]:checked').forEach(cb => {
+            perkhidmatanTerpilih.push(cb.value);
+        });
+        
+        const dataObj = {
+            emailPenyokong: formData.get('emailPenyokong'),
+            emailPelulus: formData.get('emailPelulus'),
+            namaPemohon: formData.get('namaPemohon'),
+            emailPemohon: formData.get('emailPemohon'),
+            seksyen: formData.get('seksyen'),
+            tarikh: formData.get('tarikh'),
+            perkhidmatan: perkhidmatanTerpilih.join(', ') + (formData.get('perkhidmatanLain') ? ', ' + formData.get('perkhidmatanLain') : ''),
+            produk: formData.get('produk'),
+            noRujukan: formData.get('noRujukan'),
+            penerangan: formData.get('penerangan')
+        };
+
+        // Gantikan URL di bawah dengan Web App URL daripada Google Apps Script anda nanti
+        fetch('https://https://script.google.com/macros/s/AKfycbzUWRUEDwzO7VdTaz4QPp51wxLc-BVTvxZ6Dzo19fHnLYmAMeGc85OvzhAFdJDmJw2h/exec', {
+            method: 'POST',
+            body: JSON.stringify(dataObj)
+        })
+        .then(res => res.json())
+        .then(res => { alert('Permohonan berjaya dihantar!'); form.reset(); })
+        .catch(err => alert('Ralat penghantaran: ' + err));
+    }
+</script>
+</body>
+</html>
